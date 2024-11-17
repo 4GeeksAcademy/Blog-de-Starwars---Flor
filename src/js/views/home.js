@@ -6,6 +6,7 @@ import { Context } from "../store/appContext";
 import CardPlanet from "../component/cardPlanets";
 import CardVehicle from "../component/cardVehicles";
 
+
 export const Home = () => {
 	const {actions, store} = useContext(Context)
 	useEffect(() => {
@@ -14,9 +15,9 @@ export const Home = () => {
 		actions.loadVehicle()
 	}, [])
 	return (
-		<div className="text-center mt-5 bg-black">
-			<h1>Star Wars API</h1>
-			<h1>Personajes</h1>
+		<div className="text-center" style={{"fontFamily": "Star Wars"}}>
+			<h1 className="text-warning"><strong>STAR WARS API</strong></h1>
+			<h1 className="text-warning">Personajes</h1>
 			<div className="d-flex flex-row overflow-scroll">
 			{
 				store.people.map((item, index)=>{
@@ -26,7 +27,7 @@ export const Home = () => {
 				})
 			}
 			</div>
-			<h1>Planetas</h1>
+			<h1 className="text-warning">Planetas</h1>
 			<div className="d-flex flex-row overflow-scroll">
 			{
 				store.planets.map((item, index)=>{
@@ -37,7 +38,7 @@ export const Home = () => {
 			}
 			</div>
 
-			<h1>Vehículos</h1>
+			<h1 className="text-warning">Vehículos</h1>
 			<div className="d-flex flex-row overflow-scroll">
 			{
 				store.vehicles.map((item, index)=>{

@@ -7,7 +7,7 @@ const CardPlanet = (props) => {
     const esFavorito=store.misFavoritos.includes(props.name)
 
     return (
-        <div className="card" style={{"width": "18rem", flex: "none", margin: "10px"}}>
+        <div className="card border-warning" style={{"width": "18rem", flex: "none", margin: "10px"}}>
             <img src={ 
                 props.uid == 1?
                 "https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png": 

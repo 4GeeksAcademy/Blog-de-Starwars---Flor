@@ -19,7 +19,7 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div style={{ height: 'auto', backgroundImage: `url('https://e0.pxfuel.com/wallpapers/422/975/desktop-wallpaper-star-wars-space-background-hq-star-wars-galaxy.jpg')`, backgroundSize: 'cover' }}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
