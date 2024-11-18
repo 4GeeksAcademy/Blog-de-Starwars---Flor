@@ -18,7 +18,7 @@ export const Navbar = () => {
 						{store.misFavoritos.map((item, index) => (
 							<li><a className="dropdown-item" key={index}>
 								{item}
-								<button className="btn btn-outline-danger float-end" onClick={() => actions.favoritos(props.name)}>
+								<button className="btn btn-outline-danger float-end" onClick={() => actions.favoritos(item)}>
 									<i className="fa fa-trash"></i>
 								</button>
 							</a></li>
